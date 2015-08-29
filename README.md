@@ -1,3 +1,3 @@
 # C_Programming_Proctice
-Follow &lt;Learn C The Hard Way>
-Follow &lt;C Programming Language>
+
+follow the book C Programming Language
