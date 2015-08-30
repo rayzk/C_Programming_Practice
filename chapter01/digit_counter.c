@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// count the digit from 0 to 9.
+
 int main(){
 
 
@@ -8,6 +10,7 @@ int main(){
 
 	nwhite = nother = 0;
 
+	// initialize the array to be 0 everywhere
 	for (i=0; i<10; ++i){
 		ndigit[i] = 0;
 	}
@@ -22,9 +25,11 @@ int main(){
 		}
 	}
 
-	printf ("digits = ");
 	for (i=0; i<10; ++i){
-		printf ("%d", ndigit[i]);
+		printf ("Digit %d shows %d times.", i, ndigit[i]);
+		for (int j=0; j<ndigit[i]; j++)
+			printf ("|");	// prints the histogram of the digits
+		printf ("\n");
 	}
 	printf (", white space = %d, other = %d\n", nwhite, nother);
 }
