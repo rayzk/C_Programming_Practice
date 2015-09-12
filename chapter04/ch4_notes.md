@@ -25,3 +25,10 @@
 	
 ###4.3 External Variables
 
+* `internal` arguments and vars defined inside functions
+* `external var` are defined outside of any functions, and potentially available to many functions
+* `function` are always external (C does not allow function defined inside function)
+* `external linkage` external vars and functions are referenced by the same name
+* `external var` are more convenient and efficient than long argument lists
+* `internal var` is created when entering function and destroyed when leaving function
+* 
