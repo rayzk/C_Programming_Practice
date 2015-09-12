@@ -81,8 +81,20 @@ __Enumeration constants__
 * longer int converted to shorter int by dropping excess high-order bit
 * float to int cause truncation of any fraction part
 * absence of function prototype, `char` and `short` becomes `int`, `float` becomes `double`
-* 
+* `cast` produces the value of n in the proper type, `n` is not altered
+* declaration of arguments in function causes automatic coercion of any arguments when the function is called
 
+###2.8 Increment and Decrement Operators
+
+* `++n` increments n before its value is used
+* `n++` increments n after its value is used
+
+###2.9 Bitwise Operators
+
+* only applied to integer operands `char`, `short`, `int`, `long` whether signed or unsigned
+* right shift with signed values will fit vacated bit according to `arithmetic shift` or `logical shift`
+* `~` unary operator yields the one's complement which is converting 1 to 0 and 0 to 1
+* 
 
 
   
