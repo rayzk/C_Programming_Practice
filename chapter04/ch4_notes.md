@@ -118,6 +118,31 @@
 ###4.10 Recursion
 
 * each invocation of function gets a fresh set of all the `automatic` vars
-* 	
+
+###4.11 The C Preprocessor
+
+**File inclusion**
+
+* handle `define` and `include` 
+* when an include file is changed, all file that depends on it must be recompiled 
+
+**Macro substitution**
+
+	// form :
+	#define name replacement text
+	
+	// example :
+	#define forever for (;;)	/* infinite loop */
+	
+	// macro with arguments :
+	#define max(A, B) ((A)>(B) ? (A) : (B))
+	
+* placing `\` at end of the line to continue `replacement text` to next line
+* the `scope` of `#define` is from its point of definition to the end of source file being compiled 
+* `max(i++, j++)` : the expression will be evaluated twice
+* in `<stdio.h>`, `gutter` and `putter` are defined as `macro`s to avoid the run-time overhead of function call
+* 
+
+
 
 
