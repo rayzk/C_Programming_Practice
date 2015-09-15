@@ -2,17 +2,9 @@
 #include <stdlib.h> 	/* for atof() */
 #include <math.h> 	/* for fmod() */
 #include <string.h> 	/* for strcmp() */
+#include "calculator.h"	/* common header file */
 
 #define MAXOP 100	/* max size of operand or operator */
-#define NUMBER '0'	/* signal that a number was found */
-#define NAME 'n' 	/* signal that a math function name was found */
-
-int getop (char []);
-
-/* for stack : */
-void push (double);
-double pop (void);
-void clear (void);
 
 /* extended functions : */
 void mathfn (char []);

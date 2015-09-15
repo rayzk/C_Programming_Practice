@@ -1,12 +1,7 @@
 #include <ctype.h>
 #include <stdio.h> 	/* for EOF */
 #include <String.h> 	/* for islower() */
-
-#define NUMBER '0' 	/* signal that a number was found */
-#define NAME 'n'	/* signal that a math function name was found */
-
-int getch (void);
-void ungetch (int);
+#include "calculator.h"
 
 /* getop : get operand or operation or math function name from user input to s[] */
 int getop (char s[]){

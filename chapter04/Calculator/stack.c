@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include "calculator.h"
 
 #define MAXVAL 100 	/* max depth of value stack */
 
+/* external stack vars used by push() / pop() / clear() */
 int sp = 0;
 double val[MAXVAL];
 
