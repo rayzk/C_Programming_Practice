@@ -137,11 +137,63 @@
 	// macro with arguments :
 	#define max(A, B) ((A)>(B) ? (A) : (B))
 	
+	// undefine :
+	#undef getchar
+	int getchar(void) { ... } 
+	
 * placing `\` at end of the line to continue `replacement text` to next line
 * the `scope` of `#define` is from its point of definition to the end of source file being compiled 
 * `max(i++, j++)` : the expression will be evaluated twice
-* in `<stdio.h>`, `gutter` and `putter` are defined as `macro`s to avoid the run-time overhead of function call
-* 
+* in `<stdio.h>`, `getchar()` and `putchar()` are defined as `macro`s to avoid the run-time overhead of function call
+* `#undef` to ensure that a routine is really a function, not a macro
+* if a parameter name is preceded by a `#` in the replacement text, the combination will be expanded into a quoted string with the parameter replaced by the actual argument, and the string is concatenated
+
+**Example of #parameter** 
+
+	#define debugprint(expire) printf(#expr " = %g\n", expr)
+	
+	// is expanded to :
+	printf ("para = %g\n", para);
+	
+* operator `##` provides a way to concatenate `arguments' name` during macro expansion, to create new `token`
+
+**Example of ##toke concatenation**
+	
+	// concatenated two parameter :
+	#define paste(front, back) front ## back
+	paste(name, 1) // gives new token name1
+	
+**Conditional Inclusion**
+
+	#if !defined(HDR)
+	#define HDR
+	
+	// content of HDR.h is here
+	
+	#endif
+	
+	/* tests system version : /
+	#if SYSTEM == SYSV
+		#define HDR "sysv.h"
+	#elif SYSTEM == BSD
+		#define HDR "bsd.h"
+	#elif SYSTEM == MSDOS
+		#deine HDR "msdos.h"
+	#else 
+		#define HDR "default.h"	
+	#endif
+	#include HDR
+	
+* `ifdef` and `ifndef` are specialized form to test whether a name is defined
+* conditional statements are evaluated during `preprocessing`
+
+#*End*
+
+
+
+	
+
+
 
 
 
