@@ -1,0 +1,7 @@
+this is a test file for line sorter
+A this is A line 
+B this is B line 
+C this is C line
+these are two identical line
+these are two identical line
+
